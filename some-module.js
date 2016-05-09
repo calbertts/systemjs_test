@@ -1,2 +1,1 @@
-var p = 'NodeJS test';
-module.exports = p
+export var p = 'NodeJS test';
