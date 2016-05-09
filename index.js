@@ -12,6 +12,6 @@ var System = require('systemjs')
   console.log('OK')
 
   System.import('some-module').then(function(m) {
-    console.log('loaded')
-    console.log(m)
+    console.log('loaded') // Never executed
+    console.log(m.p)	  // Never executed
   })
