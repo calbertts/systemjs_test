@@ -12,9 +12,11 @@ var System = require('systemjs')
 
   console.log('OK')
 
-  System.import('some-module').then(function(m) {
+  System.import('some-module.js').then(function(m) {
     console.log('loaded') // Never executed
     console.log(m.p)	  // Never executed
+  }).catch((err) => {
+    console.error('error', err)
   })
 
   console.log('end')
