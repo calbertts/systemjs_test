@@ -8,6 +8,7 @@ var System = require('systemjs')
    */
 
   System.transpiler = 'babel'
+  System.loaderErrorStack = true
 
   console.log('OK')
 
@@ -15,3 +16,9 @@ var System = require('systemjs')
     console.log('loaded') // Never executed
     console.log(m.p)	  // Never executed
   })
+
+  console.log('end')
+
+  setTimeout(() => {
+    console.log('timeout')
+  }, 3000)
